@@ -2,11 +2,26 @@
 
 <head>
     <script>
+        function pro() {
+            var w = document.getElementById('win-count').value;
+            w = Number(w);
+            var l = document.getElementById('lose-count').value;
+            l = Number(l);
+            var cal = w / (w + l) * 100;
+
+            document.getElementById('win-rate').value = cal;
+
+        }
     </script>
 </head>
 
 <body>
-  
+    <p>勝数:<input id="win-count" type="text"></p>
+    <p>負数:<input id="lose-count" type="text"></p>
+
+    <button onclick="pro()">計算</button>
+    　<p>勝率は<input id="win-rate" type="text">%です</p>
+
 </body>
 
 </html>
